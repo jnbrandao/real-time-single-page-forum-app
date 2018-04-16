@@ -2,14 +2,17 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Login from '../components/login/Login'
+import Signup from '../components/login/signup'
+import Forum from '../components/forum/forum'
+import Logout from "../components/login/Logout"
 
 Vue.use(VueRouter)
 
-const Foo = { template: '<div>foo</div>' }
-const Bar = { template: '<div>bar</div>' }
-
 const routes = [
-    { path: '/login', component: Login }
+    { path: '/login', component: Login },
+    { path: '/logout', component: Logout },
+    { path: '/signup', component: Signup },
+    { path: '/forum', component: Forum, name: 'forum' }
   //  { path: '/bar', component: Bar }
 ]
 

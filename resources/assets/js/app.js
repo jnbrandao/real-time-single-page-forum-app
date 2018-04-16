@@ -17,6 +17,7 @@ import router from './Router/router.js'
  */
 import User from './Helpers/User'
 window.User = User
+window.EventBus = new Vue()
 
  
 Vue.use(Vuetify)

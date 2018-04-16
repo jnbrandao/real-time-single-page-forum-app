@@ -24,7 +24,7 @@ class Token{
     isValid(token){
         const payload = this.payload(token)
         if (payload) {
-            if (payload.iss == "http://localhost:8000/api/auth/login") {
+            if (payload.iss == "http://localhost:8000/api/auth/login" || "http://localhost:8000/api/auth/signup") {
                 return true 
             } else {
               return false  
