@@ -16,7 +16,7 @@
 
 <script>
     import ShowQuestion from "./ShowQuestion";
-    import EditQuestion from "./editQuestion"
+    import EditQuestion from "./editQuestion";
     export default {
         data () {
             return {
@@ -29,17 +29,15 @@
             EditQuestion
         },
         created () {
-             //console.log(this.$route.params.slug)
-           this.listen(),
-           this.getQuestion()
-           
+            this.listen(),
+            this.getQuestion()
         },
         methods: {
             listen(){
-                EventBus.$on('startEditing', () => {
+                EventBus.$on('startEditing', ()=>{ 
                     this.editing = true
                 })
-                EventBus.$on('cancelEditing', () => {
+                 EventBus.$on('cancelEditing', ()=>{ 
                     this.editing = false
                 })
             },
@@ -48,7 +46,7 @@
                 .then(res => this.question = res.data.data)
                 .catch(error => console.log(error.response.data))
             }
-        },
+        }
     }
 </script>
 
